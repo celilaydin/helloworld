@@ -11,7 +11,22 @@ pipeline {
         echo 'hi guys'
         sh '''gcc --version
 
-gcc -g -Wall -c main.c -o hello'''
+'''
+      }
+    }
+    stage('build') {
+      steps {
+        sh 'gcc -g -Wall -c main.c -o hello'
+      }
+    }
+    stage('test') {
+      steps {
+        sh './hello '
+      }
+    }
+    stage('archive ') {
+      steps {
+        archiveArtifacts 'hello'
       }
     }
   }
