@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'frolvlad/alpine-gcc'
+      image 'gcc'
     }
 
   }
@@ -16,7 +16,8 @@ pipeline {
     }
     stage('build') {
       steps {
-        sh 'gcc -c main.c '
+        sh '''gcc -c main.c 
+ls -la '''
       }
     }
     stage('test') {
