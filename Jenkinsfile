@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'gcc'
+      image 'node:7-alpine'
     }
 
   }
