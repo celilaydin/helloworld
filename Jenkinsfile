@@ -21,7 +21,7 @@ pipeline {
     }
     stage('test') {
       steps {
-        sh 'chmod -x hello '
+        sh 'chmod +x hello '
         sh './hello '
       }
     }
