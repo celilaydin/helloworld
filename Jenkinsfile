@@ -16,7 +16,7 @@ pipeline {
     }
     stage('build') {
       steps {
-        sh '''gcc -c main.c 
+        sh '''gcc -c main.c -o main
 ls -la '''
       }
     }
