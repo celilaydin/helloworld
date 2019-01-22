@@ -11,10 +11,7 @@ pipeline {
         echo 'hi guys'
         sh '''gcc --version
 
-
-pwd 
-
-ls '''
+gcc -g -Wall -c main.c -o hello'''
       }
     }
   }
