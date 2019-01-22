@@ -8,7 +8,8 @@ pipeline {
   stages {
     stage('scm') {
       steps {
-        echo 'gcc --version'
+        echo 'hi guys'
+        sh 'gcc --version'
       }
     }
   }
