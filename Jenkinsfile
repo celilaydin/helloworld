@@ -16,14 +16,14 @@ pipeline {
     }
     stage('build') {
       steps {
-        sh '''gcc -c main.c -o main
+        sh '''gcc -o hello main.c 
 ls -la '''
       }
     }
     stage('test') {
       steps {
-        sh 'chmod +x main '
-        sh './main '
+        sh 'chmod +x hello '
+        sh './hello '
       }
     }
     stage('archive ') {
