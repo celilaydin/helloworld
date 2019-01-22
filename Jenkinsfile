@@ -12,7 +12,9 @@ pipeline {
         sh '''gcc --version
 
 
-gcc -c hello.c -o hello'''
+pwd 
+
+ls '''
       }
     }
   }
