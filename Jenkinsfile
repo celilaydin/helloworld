@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('scm') {
       steps {
-        sh '''!#/bin/bash 
+        sh '''#!/bin/bash 
 
 echo $pwd
 
