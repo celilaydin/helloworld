@@ -28,7 +28,7 @@ ls -la '''
     }
     stage('archive ') {
       steps {
-        archiveArtifacts 'hello'
+        archiveArtifacts(artifacts: 'hello', fingerprint: true, onlyIfSuccessful: true)
       }
     }
   }
